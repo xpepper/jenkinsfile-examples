@@ -1,11 +1,11 @@
 pipeline {
   agent { label 'host' }
-  # agent {
-  #     docker {
-  #         image 'maven:3-alpine'
-  #         label 'host'
-  #     }
-  # }
+  // agent {
+  //     docker {
+  //         image 'maven:3-alpine'
+  //         label 'host'
+  //     }
+  // }
   stages {
     stage('Example') {
       steps {
