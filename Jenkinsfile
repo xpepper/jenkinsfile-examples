@@ -1,5 +1,5 @@
 pipeline {
-  agent { label 'host' }
+  agent { label 'osx' }
   // agent {
   //     docker {
   //         image 'maven:3-alpine'
