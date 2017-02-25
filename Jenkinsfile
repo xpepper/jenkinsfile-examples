@@ -9,6 +9,8 @@ pipeline {
   stages {
     stage('Example') {
       steps {
+        sh 'whoami'
+        sh 'echo $PATH'
         sh 'docker --version'
         echo 'Hello World'
       }
