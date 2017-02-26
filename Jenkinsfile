@@ -9,7 +9,10 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        env.PATH = "/usr/local/bin:${env.PATH}"
+        withEnv(["PATH+DOCKER=/usr/local/bin"]) {
+           sh 'docker --version'
+         }
+        // env.PATH = "/usr/local/bin:${env.PATH}"
         sh 'docker --version'
       }
     }
