@@ -9,10 +9,8 @@ pipeline {
   stages {
     stage('Example') {
       steps {
-        sh 'whoami'
-        sh 'echo $PATH'
+        env.PATH = "/usr/local/bin:${env.PATH}"
         sh 'docker --version'
-        echo 'Hello World'
       }
     }
   }
